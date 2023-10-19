@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Head from 'next/head';
+import FlashcardContainer from '../components/FlashcardContainer';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-)
-
-export default IndexPage
+export default function Home() {
+  return (
+    <div>
+      <Head>
+        <title>Koine Greek Flashcards</title>
+      </Head>
+      <FlashcardContainer />
+    </div>
+  );
+}
